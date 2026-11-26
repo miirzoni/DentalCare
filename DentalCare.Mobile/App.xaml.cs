@@ -13,5 +13,6 @@ namespace DentalCare.Mobile
         {
             return new Window(new AppShell());
         }
+
     }
 }

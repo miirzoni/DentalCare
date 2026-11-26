@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DentalCare.Mobile.Views.LoginPage"
+    BackgroundColor="#F5F8FA"
+    Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="28,55,28,30" Spacing="23">
+
+            <VerticalStackLayout HorizontalOptions="Center" Spacing="8">
+                <Border BackgroundColor="#087F8C"
+                        WidthRequest="85"
+                        HeightRequest="85"
+                        StrokeThickness="0"
+                        StrokeShape="RoundRectangle 25">
+                    <Label Text="🦷"
+                           FontSize="45"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </Border>
+
+                <Label Text="DentalCare"
+                       FontSize="31"
+                       FontAttributes="Bold"
+                       TextColor="#123B4A"
+                       HorizontalOptions="Center"/>
+
+                <Label Text="Vaš osmijeh, naša briga."
+                       FontSize="14"
+                       TextColor="#82949D"
+                       HorizontalOptions="Center"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="6" Margin="0,15,0,0">
+                <Label Text="Dobro došli!"
+                       FontSize="27"
+                       FontAttributes="Bold"
+                       TextColor="#183E4C"/>
+
+                <Label Text="Prijavite se na svoj korisnički račun."
+                       FontSize="14"
+                       TextColor="#82949D"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Email adresa"
+                       FontSize="13"
+                       FontAttributes="Bold"
+                       TextColor="#183E4C"/>
+
+                <Border BackgroundColor="White"
+                        Stroke="#E2EAED"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 13"
+                        Padding="13,2">
+                    <Entry x:Name="EmailEntry"
+                           Placeholder="ime@email.com"
+                           Keyboard="Email"
+                           TextColor="#183E4C"
+                           PlaceholderColor="#A0ADB3"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Spacing="8">
+                <Label Text="Lozinka"
+                       FontSize="13"
+                       FontAttributes="Bold"
+                       TextColor="#183E4C"/>
+
+                <Border BackgroundColor="White"
+                        Stroke="#E2EAED"
+                        StrokeThickness="1"
+                        StrokeShape="RoundRectangle 13"
+                        Padding="13,2">
+                    <Entry x:Name="PasswordEntry"
+                           Placeholder="Unesite lozinku"
+                           IsPassword="True"
+                           TextColor="#183E4C"
+                           PlaceholderColor="#A0ADB3"/>
+                </Border>
+            </VerticalStackLayout>
+
+            <Button Text="Prijavi se"
+                    Clicked="OnLoginClicked"
+                    BackgroundColor="#087F8C"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    CornerRadius="14"
+                    HeightRequest="54"/>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="5">
+                <Label Text="Nemate račun?"
+                       FontSize="13"
+                       TextColor="#82949D"/>
+
+                <Label Text="Registrujte se"
+                       FontSize="13"
+                       FontAttributes="Bold"
+                       TextColor="#087F8C">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnRegisterTapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </HorizontalStackLayout>
+
+            <Label Text="DentalCare © 2026"
+                   FontSize="11"
+                   TextColor="#A0ADB3"
+                   HorizontalOptions="Center"
+                   Margin="0,20,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
