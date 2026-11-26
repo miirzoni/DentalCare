@@ -1,6 +1,10 @@
+
 .vs/
 **/bin/
 **/obj/
 *.user
 *.suo
 *.log
+*.nupkg
+packages/
+appsettings.Development.json
